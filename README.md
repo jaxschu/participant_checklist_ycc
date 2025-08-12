@@ -1,159 +1,108 @@
-# Participant Orientation Checklist
+# Your Centred Care - Participant Orientation Checklist
 
-A modern, responsive participant orientation checklist web application that helps event organizers ensure all participants are ready to participate in activities.
+一个现代化的、交互式的参与者导向检查表网页应用，专为Your Centred Care组织设计。
 
-## Features
+## 功能特点
 
-### 🎯 Core Features
-- **Interactive Checklist** - Contains 5 main categories of check items
-- **Real-time Progress Tracking** - Automatically calculates completion percentage
-- **Local Storage** - Automatically saves progress to browser local storage
-- **Print Functionality** - Generates print-friendly checklist format
+### 📋 完整的检查表内容
+- **权利和责任** - 包括如何行使权利、选择倡导者、控制服务交付等
+- **投诉和反馈程序** - 如何提出投诉、提供反馈、完成满意度调查
+- **权利宪章** - 参与者权利宪章确认
+- **服务信息** - 营业时间、地点、服务内容、联系点
+- **服务资格信息** - 适当资源、优先级、等候名单管理、服务拒绝/终止、费用
+- **规划策略** - 积极参与制定规划策略
+- **整体方法** - 整体、协作和基于优势的方法，包括家庭和照顾者能力建设策略
+- **安全环境** - 有权生活在免受虐待的安全环境中
 
-### 🎨 User Interface
-- **Modern Design** - Uses gradient backgrounds and glassmorphism effects
-- **Responsive Layout** - Perfectly adapts to desktop, tablet, and mobile
-- **Animation Effects** - Smooth transitions and hover effects
-- **Icon Support** - Uses Font Awesome icons to enhance visual effects
+### ✨ 交互式功能
+- **实时进度跟踪** - 显示完成百分比
+- **本地存储** - 自动保存进度和签名信息
+- **数字签名** - 参与者和工作人员的签名和日期字段
+- **打印功能** - 生成专业的打印版本
+- **键盘快捷键** - 提高使用效率
+- **响应式设计** - 支持桌面和移动设备
 
-### ⚡ Interactive Features
-- **Select All/Unselect All** - One-click operation for all items
-- **Keyboard Shortcuts** - Supports quick operations
-- **Notification System** - Real-time feedback for user actions
-- **Touch Support** - Optimized for mobile devices
+### 🎨 现代化设计
+- **Your Centred Care品牌** - 使用组织logo和深蓝色主题
+- **专业布局** - 清晰的分组和视觉层次
+- **无障碍设计** - 易于阅读和操作
+- **打印优化** - 优化的打印样式
 
-## File Structure
+## 技术特性
+
+- **纯HTML/CSS/JavaScript** - 无需服务器，可直接在浏览器中运行
+- **本地存储** - 使用localStorage保存数据
+- **响应式设计** - 适配各种屏幕尺寸
+- **现代CSS** - 使用Flexbox和Grid布局
+- **字体图标** - Font Awesome图标库
+
+## 使用方法
+
+1. **打开网页** - 在浏览器中打开`index.html`
+2. **填写检查表** - 点击复选框标记已完成的项目
+3. **填写签名** - 在底部填写参与者和工作人员信息
+4. **保存进度** - 点击"保存进度"按钮或使用Ctrl+S
+5. **打印文档** - 点击"打印检查表"按钮或使用Ctrl+P
+
+## 键盘快捷键
+
+- `Ctrl/Cmd + A` - 全选所有项目
+- `Ctrl/Cmd + D` - 取消全选
+- `Ctrl/Cmd + S` - 保存进度
+- `Ctrl/Cmd + P` - 打印检查表
+
+## 文件结构
 
 ```
-ycc_week4/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles file
-├── script.js           # JavaScript functionality file
-├── README.md           # Documentation
-└── Participant-Orientation-Checklist.pdf  # Original PDF file
+participant_checklist_ycc/
+├── index.html          # 主HTML文件
+├── styles.css          # 样式文件
+├── script.js           # JavaScript功能
+├── README.md           # 说明文档
+├── DEPLOYMENT.md       # 部署说明
+├── QUICK_DEPLOY.md     # 快速部署指南
+├── deploy.bat          # Windows部署脚本
+├── robots.txt          # 搜索引擎配置
+├── sitemap.xml         # 网站地图
+└── Participant-Orientation-Checklist.pdf  # 原始PDF表单
 ```
 
-## Usage
+## 部署
 
-### Basic Usage
-1. Open the `index.html` file in a browser
-2. Click checkboxes to mark completed items
-3. View the progress bar on the right to understand completion status
-4. Use buttons for batch operations
+### 本地使用
+直接在浏览器中打开`index.html`文件即可使用。
 
-### Keyboard Shortcuts
-- `Ctrl/Cmd + A` - Select all items
-- `Ctrl/Cmd + D` - Unselect all items
-- `Ctrl/Cmd + S` - Save progress
-- `Ctrl/Cmd + P` - Print checklist
+### 网络部署
+1. 将所有文件上传到网络服务器
+2. 确保服务器支持静态文件服务
+3. 访问`index.html`即可使用
 
-### Function Buttons
-- **Select All** - Select all checklist items
-- **Unselect All** - Unselect all items
-- **Save Progress** - Manually save current progress
-- **Print Checklist** - Generate print version
+### 快速部署
+使用提供的`deploy.bat`脚本进行Windows环境下的快速部署。
 
-## Checklist Categories
+## 浏览器兼容性
 
-### 1. Participant Registration
-- Participant information has been completely collected
-- Emergency contact information has been recorded
-- Participant consent form has been signed
-- Special requirements have been confirmed
-
-### 2. Event Information
-- Event schedule has been provided
-- Event location and transportation information has been explained
-- Dress code requirements have been communicated
-- Event rules and expectations have been clarified
-
-### 3. Safety & Health
-- Health declaration has been completed
-- Allergy information has been recorded
-- Medication usage has been documented
-- Emergency medical procedures have been explained
-
-### 4. Equipment & Materials
-- Required equipment is ready
-- Material list has been confirmed
-- Technical equipment has been tested
-- Backup plans have been prepared
-
-### 5. Team Preparation
-- Staff roles have been assigned
-- Communication channels have been established
-- Emergency response plan has been developed
-- Team meeting has been conducted
-
-## Technical Features
-
-### Frontend Technology
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styles and animations
-- **JavaScript ES6+** - Interactive functionality
-- **Font Awesome** - Icon library
-- **Google Fonts** - Font optimization
-
-### Responsive Design
-- Desktop: Two-column layout
-- Tablet: Adaptive single column
-- Mobile: Optimized touch experience
-
-### Browser Compatibility
 - Chrome 60+
 - Firefox 55+
 - Safari 12+
 - Edge 79+
 
-## Customization and Extension
+## 数据隐私
 
-### Modifying Checklist Items
-Edit the checklist section in the `index.html` file to:
-- Add new checklist items
-- Modify existing item content
-- Adjust category structure
+- 所有数据仅存储在用户本地浏览器中
+- 不会向任何服务器发送数据
+- 符合数据保护要求
 
-### Style Customization
-Modify the `styles.css` file to:
-- Change color themes
-- Adjust layout and spacing
-- Customize animation effects
+## 版本信息
 
-### Function Extension
-In `script.js`, you can add:
-- New interactive features
-- Data export options
-- Team collaboration features
+- **版本**: 1.1
+- **日期**: 2024年3月26日
+- **文档名称**: YCC Participant Orientation Checklist
 
-## Deployment Instructions
+## 支持
 
-### Local Deployment
-1. Download all files to a local directory
-2. Open `index.html` with any modern browser
-3. No server required, can run directly
-
-### Web Deployment
-1. Upload all files to a web server
-2. Ensure file permissions are correct
-3. Access via domain name
-
-## License
-
-This project is licensed under the MIT License and can be freely used and modified.
-
-## Changelog
-
-### v1.0.0 (2024-12-19)
-- Initial version release
-- Basic checklist functionality
-- Responsive design
-- Local storage support
-- Print functionality
-
-## Contributing
-
-Welcome to submit issue reports and feature suggestions!
+如需技术支持或有任何问题，请联系Your Centred Care组织。
 
 ---
 
-**Note**: This web application is based on the original PDF file and provides a richer interactive experience and modern interface.
+© 2024 Your Centred Care. 保留所有权利。
