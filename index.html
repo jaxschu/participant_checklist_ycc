@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参与者导向检查清单 - 现代化活动管理工具</title>
+    
+    <!-- SEO 元标签 -->
+    <meta name="description" content="参与者导向检查清单 - 帮助活动组织者确保所有参与者都准备好参与活动。现代化的交互式检查清单，支持进度跟踪、本地存储和打印功能。">
+    <meta name="keywords" content="检查清单,参与者,活动组织,项目管理,活动管理,任务管理,进度跟踪">
+    <meta name="author" content="参与者导向检查清单">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph 标签 -->
+    <meta property="og:title" content="参与者导向检查清单">
+    <meta property="og:description" content="现代化的参与者导向检查清单网页应用，帮助活动组织者确保所有参与者都准备好参与活动">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta property="og:image" content="https://your-domain.com/og-image.png">
+    <meta property="og:site_name" content="参与者导向检查清单">
+    
+    <!-- Twitter 标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="参与者导向检查清单">
+    <meta name="twitter:description" content="现代化的参与者导向检查清单网页应用">
+    <meta name="twitter:image" content="https://your-domain.com/twitter-image.png">
+    
+    <!-- 网站图标 -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-clipboard-check"></i> 参与者导向检查清单</h1>
+                <p class="subtitle">确保所有参与者都准备好参与活动</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="checklist-container">
+                <div class="checklist-section">
+                    <h2><i class="fas fa-user-plus"></i> 参与者注册</h2>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="reg1">
+                            <label for="reg1">参与者信息已完整收集</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="reg2">
+                            <label for="reg2">紧急联系人信息已记录</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="reg3">
+                            <label for="reg3">参与者同意书已签署</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="reg4">
+                            <label for="reg4">特殊需求已确认</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h2><i class="fas fa-info-circle"></i> 活动信息</h2>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="info1">
+                            <label for="info1">活动时间表已提供</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="info2">
+                            <label for="info2">活动地点和交通信息已说明</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="info3">
+                            <label for="info3">着装要求已告知</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="info4">
+                            <label for="info4">活动规则和期望已明确</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h2><i class="fas fa-shield-alt"></i> 安全与健康</h2>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="safety1">
+                            <label for="safety1">健康声明已填写</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="safety2">
+                            <label for="safety2">过敏信息已记录</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="safety3">
+                            <label for="safety3">药物使用情况已了解</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="safety4">
+                            <label for="safety4">紧急医疗程序已说明</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h2><i class="fas fa-tools"></i> 设备与材料</h2>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="equip1">
+                            <label for="equip1">所需设备已准备就绪</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="equip2">
+                            <label for="equip2">材料清单已确认</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="equip3">
+                            <label for="equip3">技术设备已测试</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="equip4">
+                            <label for="equip4">备用方案已准备</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-section">
+                    <h2><i class="fas fa-users"></i> 团队准备</h2>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="team1">
+                            <label for="team1">工作人员已分配角色</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="team2">
+                            <label for="team2">沟通渠道已建立</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="team3">
+                            <label for="team3">应急预案已制定</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="team4">
+                            <label for="team4">团队会议已召开</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-container">
+                    <h3>完成进度</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressText">0%</span> 完成
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="checkAll()">
+                        <i class="fas fa-check-double"></i> 全选
+                    </button>
+                    <button class="btn btn-secondary" onclick="uncheckAll()">
+                        <i class="fas fa-times"></i> 取消全选
+                    </button>
+                    <button class="btn btn-success" onclick="saveProgress()">
+                        <i class="fas fa-save"></i> 保存进度
+                    </button>
+                    <button class="btn btn-info" onclick="printChecklist()">
+                        <i class="fas fa-print"></i> 打印清单
+                    </button>
+                    <button class="btn btn-warning" onclick="exportData()">
+                        <i class="fas fa-download"></i> 导出数据
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 参与者导向检查清单. 保留所有权利.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
