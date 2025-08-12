@@ -1,13 +1,13 @@
-// 获取所有复选框
+// Get all checkboxes
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const progressFill = document.getElementById('progressFill');
 const progressText = document.getElementById('progressText');
 
-// 初始化进度
+// Initialize progress
 let totalItems = checkboxes.length;
 let completedItems = 0;
 
-// 更新进度条
+// Update progress bar
 function updateProgress() {
     completedItems = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
     const percentage = Math.round((completedItems / totalItems) * 100);
@@ -15,38 +15,38 @@ function updateProgress() {
     progressFill.style.width = percentage + '%';
     progressText.textContent = percentage + '%';
     
-    // 保存进度到本地存储
+    // Save progress to local storage
     saveToLocalStorage();
 }
 
-// 为每个复选框添加事件监听器
+// Add event listener for each checkbox
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener('change', updateProgress);
 });
 
-// 全选功能
+// Select all functionality
 function checkAll() {
     checkboxes.forEach(checkbox => {
         checkbox.checked = true;
     });
     updateProgress();
     
-    // 显示成功消息
-    showNotification('所有项目已选中！', 'success');
+    // Show success message
+    showNotification('All items have been selected!', 'success');
 }
 
-// 取消全选功能
+// Unselect all functionality
 function uncheckAll() {
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
     });
     updateProgress();
     
-    // 显示成功消息
-    showNotification('所有项目已取消选中！', 'info');
+    // Show success message
+    showNotification('All items have been unselected!', 'info');
 }
 
-// 保存进度功能
+// Save progress functionality
 function saveProgress() {
     const progress = {
         completedItems: completedItems,
@@ -56,19 +56,19 @@ function saveProgress() {
     };
     
     localStorage.setItem('checklistProgress', JSON.stringify(progress));
-    showNotification('进度已保存到本地存储！', 'success');
+    showNotification('Progress has been saved to local storage!', 'success');
 }
 
-// 从本地存储加载进度
+// Load progress from local storage
 function loadFromLocalStorage() {
     const saved = localStorage.getItem('checklistProgress');
     if (saved) {
         const progress = JSON.parse(saved);
-        console.log('加载保存的进度:', progress);
+        console.log('Loading saved progress:', progress);
     }
 }
 
-// 保存到本地存储
+// Save to local storage
 function saveToLocalStorage() {
     const progress = {
         completedItems: completedItems,
@@ -80,15 +80,15 @@ function saveToLocalStorage() {
     localStorage.setItem('checklistProgress', JSON.stringify(progress));
 }
 
-// 打印清单功能
+// Print checklist functionality
 function printChecklist() {
-    // 创建打印友好的内容
+    // Create print-friendly content
     const printWindow = window.open('', '_blank');
     const printContent = `
         <!DOCTYPE html>
         <html>
         <head>
-            <title>参与者导向检查清单</title>
+            <title>Participant Orientation Checklist</title>
             <style>
                 body { font-family: Arial, sans-serif; margin: 20px; }
                 .header { text-align: center; margin-bottom: 30px; }
@@ -102,18 +102,18 @@ function printChecklist() {
         </head>
         <body>
             <div class="header">
-                <h1>参与者导向检查清单</h1>
-                <p>确保所有参与者都准备好参与活动</p>
+                <h1>Participant Orientation Checklist</h1>
+                <p>Ensure all participants are ready to participate in activities</p>
             </div>
             
             <div class="progress">
-                完成进度: ${Math.round((completedItems / totalItems) * 100)}%
+                Completion Progress: ${Math.round((completedItems / totalItems) * 100)}%
             </div>
             
             ${generatePrintContent()}
             
             <div style="margin-top: 30px; text-align: center; font-size: 12px; color: #666;">
-                打印时间: ${new Date().toLocaleString('zh-CN')}
+                Print Time: ${new Date().toLocaleString('en-US')}
             </div>
         </body>
         </html>
@@ -124,7 +124,7 @@ function printChecklist() {
     printWindow.print();
 }
 
-// 生成打印内容
+// Generate print content
 function generatePrintContent() {
     const sections = document.querySelectorAll('.checklist-section');
     let content = '';
@@ -153,9 +153,9 @@ function generatePrintContent() {
     return content;
 }
 
-// 显示通知消息
+// Show notification message
 function showNotification(message, type = 'info') {
-    // 创建通知元素
+    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
@@ -163,7 +163,7 @@ function showNotification(message, type = 'info') {
         <span>${message}</span>
     `;
     
-    // 添加样式
+    // Add styles
     notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -184,12 +184,12 @@ function showNotification(message, type = 'info') {
     
     document.body.appendChild(notification);
     
-    // 显示动画
+    // Show animation
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
     
-    // 自动隐藏
+    // Auto hide
     setTimeout(() => {
         notification.style.transform = 'translateX(400px)';
         setTimeout(() => {
@@ -198,46 +198,46 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// 键盘快捷键支持
+// Keyboard shortcut support
 document.addEventListener('keydown', function(event) {
-    // Ctrl/Cmd + A: 全选
+    // Ctrl/Cmd + A: Select all
     if ((event.ctrlKey || event.metaKey) && event.key === 'a') {
         event.preventDefault();
         checkAll();
     }
     
-    // Ctrl/Cmd + D: 取消全选
+    // Ctrl/Cmd + D: Unselect all
     if ((event.ctrlKey || event.metaKey) && event.key === 'd') {
         event.preventDefault();
         uncheckAll();
     }
     
-    // Ctrl/Cmd + S: 保存进度
+    // Ctrl/Cmd + S: Save progress
     if ((event.ctrlKey || event.metaKey) && event.key === 's') {
         event.preventDefault();
         saveProgress();
     }
     
-    // Ctrl/Cmd + P: 打印
+    // Ctrl/Cmd + P: Print
     if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
         event.preventDefault();
         printChecklist();
     }
 });
 
-// 添加键盘快捷键提示
+// Add keyboard shortcut hints
 function addKeyboardShortcuts() {
     const shortcuts = [
-        { key: 'Ctrl/Cmd + A', action: '全选' },
-        { key: 'Ctrl/Cmd + D', action: '取消全选' },
-        { key: 'Ctrl/Cmd + S', action: '保存进度' },
-        { key: 'Ctrl/Cmd + P', action: '打印清单' }
+        { key: 'Ctrl/Cmd + A', action: 'Select All' },
+        { key: 'Ctrl/Cmd + D', action: 'Unselect All' },
+        { key: 'Ctrl/Cmd + S', action: 'Save Progress' },
+        { key: 'Ctrl/Cmd + P', action: 'Print Checklist' }
     ];
     
     const shortcutsContainer = document.createElement('div');
     shortcutsContainer.className = 'keyboard-shortcuts';
     shortcutsContainer.innerHTML = `
-        <h4><i class="fas fa-keyboard"></i> 键盘快捷键</h4>
+        <h4><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h4>
         <div class="shortcuts-list">
             ${shortcuts.map(shortcut => `
                 <div class="shortcut-item">
@@ -284,29 +284,29 @@ function addKeyboardShortcuts() {
         `;
     });
     
-    // 添加到进度区域
+    // Add to progress section
     const progressSection = document.querySelector('.progress-section');
     progressSection.appendChild(shortcutsContainer);
 }
 
-// 页面加载完成后初始化
+// Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // 加载保存的进度
+    // Load saved progress
     loadFromLocalStorage();
     
-    // 更新初始进度
+    // Update initial progress
     updateProgress();
     
-    // 添加键盘快捷键提示
+    // Add keyboard shortcut hints
     addKeyboardShortcuts();
     
-    // 添加欢迎消息
+    // Add welcome message
     setTimeout(() => {
-        showNotification('欢迎使用参与者导向检查清单！', 'info');
+        showNotification('Welcome to the Participant Orientation Checklist!', 'info');
     }, 1000);
 });
 
-// 添加触摸支持（移动设备）
+// Add touch support (mobile devices)
 if ('ontouchstart' in window) {
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('touchstart', function() {
@@ -319,10 +319,10 @@ if ('ontouchstart' in window) {
     });
 }
 
-// 添加数据导出功能
+// Add data export functionality
 function exportData() {
     const data = {
-        title: '参与者导向检查清单',
+        title: 'Participant Orientation Checklist',
         timestamp: new Date().toISOString(),
         progress: {
             completed: completedItems,
@@ -359,8 +359,8 @@ function exportData() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     
-    showNotification('数据已导出为JSON文件！', 'success');
+    showNotification('Data has been exported as JSON file!', 'success');
 }
 
-// 将导出功能添加到全局作用域
+// Add export function to global scope
 window.exportData = exportData;

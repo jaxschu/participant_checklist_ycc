@@ -1,159 +1,159 @@
-# 参与者导向检查清单
+# Participant Orientation Checklist
 
-一个现代化的、响应式的参与者导向检查清单网页应用，帮助活动组织者确保所有参与者都准备好参与活动。
+A modern, responsive participant orientation checklist web application that helps event organizers ensure all participants are ready to participate in activities.
 
-## 功能特点
+## Features
 
-### 🎯 核心功能
-- **交互式检查清单** - 包含5个主要类别的检查项目
-- **实时进度跟踪** - 自动计算完成百分比
-- **本地存储** - 自动保存进度到浏览器本地存储
-- **打印功能** - 生成打印友好的清单格式
+### 🎯 Core Features
+- **Interactive Checklist** - Contains 5 main categories of check items
+- **Real-time Progress Tracking** - Automatically calculates completion percentage
+- **Local Storage** - Automatically saves progress to browser local storage
+- **Print Functionality** - Generates print-friendly checklist format
 
-### 🎨 用户界面
-- **现代化设计** - 使用渐变背景和毛玻璃效果
-- **响应式布局** - 完美适配桌面、平板和手机
-- **动画效果** - 流畅的过渡和悬停效果
-- **图标支持** - 使用Font Awesome图标增强视觉效果
+### 🎨 User Interface
+- **Modern Design** - Uses gradient backgrounds and glassmorphism effects
+- **Responsive Layout** - Perfectly adapts to desktop, tablet, and mobile
+- **Animation Effects** - Smooth transitions and hover effects
+- **Icon Support** - Uses Font Awesome icons to enhance visual effects
 
-### ⚡ 交互功能
-- **全选/取消全选** - 一键操作所有项目
-- **键盘快捷键** - 支持快速操作
-- **通知系统** - 实时反馈用户操作
-- **触摸支持** - 针对移动设备优化
+### ⚡ Interactive Features
+- **Select All/Unselect All** - One-click operation for all items
+- **Keyboard Shortcuts** - Supports quick operations
+- **Notification System** - Real-time feedback for user actions
+- **Touch Support** - Optimized for mobile devices
 
-## 文件结构
+## File Structure
 
 ```
 ycc_week4/
-├── index.html          # 主HTML文件
-├── styles.css          # CSS样式文件
-├── script.js           # JavaScript功能文件
-├── README.md           # 说明文档
-└── Participant-Orientation-Checklist.pdf  # 原始PDF文件
+├── index.html          # Main HTML file
+├── styles.css          # CSS styles file
+├── script.js           # JavaScript functionality file
+├── README.md           # Documentation
+└── Participant-Orientation-Checklist.pdf  # Original PDF file
 ```
 
-## 使用方法
+## Usage
 
-### 基本使用
-1. 在浏览器中打开 `index.html` 文件
-2. 点击复选框来标记完成的项目
-3. 查看右侧的进度条了解完成情况
-4. 使用按钮进行批量操作
+### Basic Usage
+1. Open the `index.html` file in a browser
+2. Click checkboxes to mark completed items
+3. View the progress bar on the right to understand completion status
+4. Use buttons for batch operations
 
-### 键盘快捷键
-- `Ctrl/Cmd + A` - 全选所有项目
-- `Ctrl/Cmd + D` - 取消全选
-- `Ctrl/Cmd + S` - 保存进度
-- `Ctrl/Cmd + P` - 打印清单
+### Keyboard Shortcuts
+- `Ctrl/Cmd + A` - Select all items
+- `Ctrl/Cmd + D` - Unselect all items
+- `Ctrl/Cmd + S` - Save progress
+- `Ctrl/Cmd + P` - Print checklist
 
-### 功能按钮
-- **全选** - 选中所有检查项目
-- **取消全选** - 取消所有选中项目
-- **保存进度** - 手动保存当前进度
-- **打印清单** - 生成打印版本
+### Function Buttons
+- **Select All** - Select all checklist items
+- **Unselect All** - Unselect all items
+- **Save Progress** - Manually save current progress
+- **Print Checklist** - Generate print version
 
-## 检查清单类别
+## Checklist Categories
 
-### 1. 参与者注册
-- 参与者信息已完整收集
-- 紧急联系人信息已记录
-- 参与者同意书已签署
-- 特殊需求已确认
+### 1. Participant Registration
+- Participant information has been completely collected
+- Emergency contact information has been recorded
+- Participant consent form has been signed
+- Special requirements have been confirmed
 
-### 2. 活动信息
-- 活动时间表已提供
-- 活动地点和交通信息已说明
-- 着装要求已告知
-- 活动规则和期望已明确
+### 2. Event Information
+- Event schedule has been provided
+- Event location and transportation information has been explained
+- Dress code requirements have been communicated
+- Event rules and expectations have been clarified
 
-### 3. 安全与健康
-- 健康声明已填写
-- 过敏信息已记录
-- 药物使用情况已了解
-- 紧急医疗程序已说明
+### 3. Safety & Health
+- Health declaration has been completed
+- Allergy information has been recorded
+- Medication usage has been documented
+- Emergency medical procedures have been explained
 
-### 4. 设备与材料
-- 所需设备已准备就绪
-- 材料清单已确认
-- 技术设备已测试
-- 备用方案已准备
+### 4. Equipment & Materials
+- Required equipment is ready
+- Material list has been confirmed
+- Technical equipment has been tested
+- Backup plans have been prepared
 
-### 5. 团队准备
-- 工作人员已分配角色
-- 沟通渠道已建立
-- 应急预案已制定
-- 团队会议已召开
+### 5. Team Preparation
+- Staff roles have been assigned
+- Communication channels have been established
+- Emergency response plan has been developed
+- Team meeting has been conducted
 
-## 技术特性
+## Technical Features
 
-### 前端技术
-- **HTML5** - 语义化标记
-- **CSS3** - 现代样式和动画
-- **JavaScript ES6+** - 交互功能
-- **Font Awesome** - 图标库
-- **Google Fonts** - 字体优化
+### Frontend Technology
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styles and animations
+- **JavaScript ES6+** - Interactive functionality
+- **Font Awesome** - Icon library
+- **Google Fonts** - Font optimization
 
-### 响应式设计
-- 桌面端：双栏布局
-- 平板端：自适应单栏
-- 手机端：优化触摸体验
+### Responsive Design
+- Desktop: Two-column layout
+- Tablet: Adaptive single column
+- Mobile: Optimized touch experience
 
-### 浏览器兼容性
+### Browser Compatibility
 - Chrome 60+
 - Firefox 55+
 - Safari 12+
 - Edge 79+
 
-## 自定义和扩展
+## Customization and Extension
 
-### 修改检查项目
-编辑 `index.html` 文件中的检查清单部分，可以：
-- 添加新的检查项目
-- 修改现有项目内容
-- 调整分类结构
+### Modifying Checklist Items
+Edit the checklist section in the `index.html` file to:
+- Add new checklist items
+- Modify existing item content
+- Adjust category structure
 
-### 样式定制
-修改 `styles.css` 文件可以：
-- 更改颜色主题
-- 调整布局和间距
-- 自定义动画效果
+### Style Customization
+Modify the `styles.css` file to:
+- Change color themes
+- Adjust layout and spacing
+- Customize animation effects
 
-### 功能扩展
-在 `script.js` 中可以添加：
-- 新的交互功能
-- 数据导出选项
-- 团队协作功能
+### Function Extension
+In `script.js`, you can add:
+- New interactive features
+- Data export options
+- Team collaboration features
 
-## 部署说明
+## Deployment Instructions
 
-### 本地部署
-1. 下载所有文件到本地目录
-2. 使用任何现代浏览器打开 `index.html`
-3. 无需服务器，可直接运行
+### Local Deployment
+1. Download all files to a local directory
+2. Open `index.html` with any modern browser
+3. No server required, can run directly
 
-### 网络部署
-1. 上传所有文件到Web服务器
-2. 确保文件权限正确
-3. 通过域名访问
+### Web Deployment
+1. Upload all files to a web server
+2. Ensure file permissions are correct
+3. Access via domain name
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证，可自由使用和修改。
+This project is licensed under the MIT License and can be freely used and modified.
 
-## 更新日志
+## Changelog
 
 ### v1.0.0 (2024-12-19)
-- 初始版本发布
-- 基础检查清单功能
-- 响应式设计
-- 本地存储支持
-- 打印功能
+- Initial version release
+- Basic checklist functionality
+- Responsive design
+- Local storage support
+- Print functionality
 
-## 贡献
+## Contributing
 
-欢迎提交问题报告和功能建议！
+Welcome to submit issue reports and feature suggestions!
 
 ---
 
-**注意**：此网页应用基于原始PDF文件创建，提供了更丰富的交互体验和现代化界面。
+**Note**: This web application is based on the original PDF file and provides a richer interactive experience and modern interface.

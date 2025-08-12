@@ -1,148 +1,148 @@
-# 网站部署指南
+# Website Deployment Guide
 
-## 🚀 部署选项
+## 🚀 Deployment Options
 
-### 选项1：GitHub Pages（推荐 - 免费）
+### Option 1: GitHub Pages (Recommended - Free)
 
-#### 步骤：
-1. **创建GitHub仓库**
-   - 访问 [GitHub.com](https://github.com)
-   - 点击 "New repository"
-   - 仓库名称：`participant-checklist` 或您喜欢的名称
-   - 选择 "Public"
-   - 不要初始化README（我们已经有了）
+#### Steps:
+1. **Create GitHub Repository**
+   - Visit [GitHub.com](https://github.com)
+   - Click "New repository"
+   - Repository name: `participant-checklist` or your preferred name
+   - Select "Public"
+   - Don't initialize README (we already have one)
 
-2. **推送代码到GitHub**
+2. **Push Code to GitHub**
    ```bash
-   git remote add origin https://github.com/您的用户名/participant-checklist.git
+   git remote add origin https://github.com/your-username/participant-checklist.git
    git branch -M main
    git push -u origin main
    ```
 
-3. **启用GitHub Pages**
-   - 进入仓库设置 (Settings)
-   - 找到 "Pages" 选项
-   - Source 选择 "Deploy from a branch"
-   - Branch 选择 "main"
-   - 点击 "Save"
+3. **Enable GitHub Pages**
+   - Go to repository settings (Settings)
+   - Find "Pages" option
+   - Source select "Deploy from a branch"
+   - Branch select "main"
+   - Click "Save"
 
-4. **访问网站**
-   - 您的网站将在几分钟后可用
-   - 地址：`https://您的用户名.github.io/participant-checklist`
+4. **Access Website**
+   - Your website will be available in a few minutes
+   - URL: `https://your-username.github.io/participant-checklist`
 
-### 选项2：Netlify（免费）
+### Option 2: Netlify (Free)
 
-#### 步骤：
-1. **注册Netlify账户**
-   - 访问 [Netlify.com](https://netlify.com)
-   - 使用GitHub账户登录
+#### Steps:
+1. **Register Netlify Account**
+   - Visit [Netlify.com](https://netlify.com)
+   - Login with GitHub account
 
-2. **部署网站**
-   - 点击 "New site from Git"
-   - 选择您的GitHub仓库
-   - 点击 "Deploy site"
+2. **Deploy Website**
+   - Click "New site from Git"
+   - Select your GitHub repository
+   - Click "Deploy site"
 
-3. **自定义域名（可选）**
-   - 在站点设置中可以添加自定义域名
+3. **Custom Domain (Optional)**
+   - Can add custom domain in site settings
 
-### 选项3：Vercel（免费）
+### Option 3: Vercel (Free)
 
-#### 步骤：
-1. **注册Vercel账户**
-   - 访问 [Vercel.com](https://vercel.com)
-   - 使用GitHub账户登录
+#### Steps:
+1. **Register Vercel Account**
+   - Visit [Vercel.com](https://vercel.com)
+   - Login with GitHub account
 
-2. **导入项目**
-   - 点击 "New Project"
-   - 选择您的GitHub仓库
-   - 点击 "Deploy"
+2. **Import Project**
+   - Click "New Project"
+   - Select your GitHub repository
+   - Click "Deploy"
 
-### 选项4：传统Web服务器
+### Option 4: Traditional Web Server
 
-#### 步骤：
-1. **购买域名和主机**
-   - 购买域名（如：阿里云、腾讯云等）
-   - 购买虚拟主机或云服务器
+#### Steps:
+1. **Purchase Domain and Hosting**
+   - Purchase domain (e.g., Alibaba Cloud, Tencent Cloud, etc.)
+   - Purchase virtual hosting or cloud server
 
-2. **上传文件**
-   - 将所有文件上传到服务器
-   - 确保 `index.html` 在根目录
+2. **Upload Files**
+   - Upload all files to server
+   - Ensure `index.html` is in root directory
 
-3. **配置域名**
-   - 将域名解析指向服务器IP
+3. **Configure Domain**
+   - Point domain DNS to server IP
 
-## 📋 部署前检查清单
+## 📋 Pre-Deployment Checklist
 
-- [ ] 所有文件都已提交到Git
-- [ ] 测试本地功能正常
-- [ ] 检查所有链接和图片
-- [ ] 验证响应式设计
-- [ ] 测试打印功能
+- [ ] All files have been committed to Git
+- [ ] Test local functionality is normal
+- [ ] Check all links and images
+- [ ] Verify responsive design
+- [ ] Test print functionality
 
-## 🔧 部署后配置
+## 🔧 Post-Deployment Configuration
 
-### 添加网站图标
+### Add Website Icon
 ```html
-<!-- 在 index.html 的 head 部分添加 -->
+<!-- Add to head section of index.html -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 ```
 
-### 添加SEO元标签
+### Add SEO Meta Tags
 ```html
-<!-- 在 index.html 的 head 部分添加 -->
-<meta name="description" content="参与者导向检查清单 - 帮助活动组织者确保所有参与者都准备好参与活动">
-<meta name="keywords" content="检查清单,参与者,活动组织,项目管理">
-<meta name="author" content="您的姓名">
+<!-- Add to head section of index.html -->
+<meta name="description" content="Participant Orientation Checklist - Help event organizers ensure all participants are ready to participate in activities">
+<meta name="keywords" content="checklist,participants,event organization,project management">
+<meta name="author" content="Your Name">
 ```
 
-### 添加社交媒体标签
+### Add Social Media Tags
 ```html
-<!-- Open Graph 标签 -->
-<meta property="og:title" content="参与者导向检查清单">
-<meta property="og:description" content="现代化的参与者导向检查清单网页应用">
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Participant Orientation Checklist">
+<meta property="og:description" content="Modern participant orientation checklist web application">
 <meta property="og:type" content="website">
-<meta property="og:url" content="您的网站URL">
+<meta property="og:url" content="Your Website URL">
 
-<!-- Twitter 标签 -->
+<!-- Twitter Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="参与者导向检查清单">
-<meta name="twitter:description" content="现代化的参与者导向检查清单网页应用">
+<meta name="twitter:title" content="Participant Orientation Checklist">
+<meta name="twitter:description" content="Modern participant orientation checklist web application">
 ```
 
-## 📊 网站分析
+## 📊 Website Analytics
 
 ### Google Analytics
-1. 创建Google Analytics账户
-2. 获取跟踪代码
-3. 添加到网站中
+1. Create Google Analytics account
+2. Get tracking code
+3. Add to website
 
-### 网站监控
-- 使用UptimeRobot监控网站可用性
-- 设置邮件通知
+### Website Monitoring
+- Use UptimeRobot to monitor website availability
+- Set up email notifications
 
-## 🔒 安全考虑
+## 🔒 Security Considerations
 
-- 启用HTTPS（GitHub Pages、Netlify、Vercel自动提供）
-- 定期更新依赖
-- 监控网站访问日志
+- Enable HTTPS (GitHub Pages, Netlify, Vercel provide automatically)
+- Regularly update dependencies
+- Monitor website access logs
 
-## 📱 移动端优化
+## 📱 Mobile Optimization
 
-- 测试各种设备尺寸
-- 确保触摸操作流畅
-- 优化加载速度
+- Test various device sizes
+- Ensure smooth touch operations
+- Optimize loading speed
 
-## 🎯 性能优化
+## 🎯 Performance Optimization
 
-- 压缩CSS和JavaScript文件
-- 优化图片大小
-- 使用CDN加速
+- Compress CSS and JavaScript files
+- Optimize image sizes
+- Use CDN acceleration
 
 ---
 
-**推荐使用GitHub Pages**，因为它：
-- 完全免费
-- 自动HTTPS
-- 易于维护
-- 与Git版本控制集成
-- 支持自定义域名
+**Recommended to use GitHub Pages** because it:
+- Completely free
+- Automatic HTTPS
+- Easy to maintain
+- Integrated with Git version control
+- Supports custom domains

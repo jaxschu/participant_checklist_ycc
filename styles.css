@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +7,10 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
@@ -19,75 +19,60 @@ body {
     padding: 20px;
 }
 
-/* 头部样式 */
+/* Header styles */
 .header {
-    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 40px;
-    margin-bottom: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.header-content h1 {
+.header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2d3748;
+    color: white;
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.header-content h1 i {
-    color: #667eea;
-    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #718096;
-    font-weight: 400;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
 }
 
-/* 主要内容区域 */
+/* Main content area */
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-/* 检查清单容器 */
+/* Checklist container */
 .checklist-container {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .checklist-section {
     margin-bottom: 30px;
-    padding: 25px;
-    background: #f8fafc;
-    border-radius: 15px;
-    border-left: 4px solid #667eea;
-    transition: all 0.3s ease;
-}
-
-.checklist-section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .checklist-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    color: #2d3748;
+    color: #4a5568;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -95,77 +80,80 @@ body {
 
 .checklist-section h2 i {
     color: #667eea;
-    font-size: 1.2rem;
 }
 
 .checklist-items {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    gap: 12px;
 }
 
 .checklist-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 15px;
-    background: white;
-    border-radius: 10px;
-    border: 2px solid #e2e8f0;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .checklist-item:hover {
-    border-color: #667eea;
-    background: #f7fafc;
+    background: #edf2f7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .checklist-item input[type="checkbox"] {
     width: 20px;
     height: 20px;
+    margin-right: 15px;
     accent-color: #667eea;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.checklist-item input[type="checkbox"]:checked {
     transform: scale(1.1);
 }
 
 .checklist-item label {
+    flex: 1;
     font-size: 1rem;
-    font-weight: 500;
     color: #4a5568;
     cursor: pointer;
-    flex: 1;
     transition: color 0.3s ease;
 }
 
 .checklist-item input[type="checkbox"]:checked + label {
     color: #667eea;
     text-decoration: line-through;
-    opacity: 0.7;
+    font-weight: 500;
 }
 
-/* 进度区域 */
+/* Progress area */
 .progress-section {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     height: fit-content;
     position: sticky;
     top: 20px;
 }
 
 .progress-container {
+    text-align: center;
     margin-bottom: 30px;
 }
 
 .progress-container h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #2d3748;
-    margin-bottom: 15px;
-    text-align: center;
+    color: #4a5568;
+    margin-bottom: 20px;
 }
 
 .progress-bar {
@@ -174,22 +162,22 @@ body {
     background: #e2e8f0;
     border-radius: 6px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
     border-radius: 6px;
-    width: 0%;
     transition: width 0.5s ease;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
 }
 
 .progress-text {
-    text-align: center;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2d3748;
+    color: #4a5568;
 }
 
 .progress-text span {
@@ -197,10 +185,9 @@ body {
     font-size: 1.3rem;
 }
 
-/* 按钮样式 */
+/* Button styles */
 .action-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 12px;
 }
 
@@ -217,39 +204,39 @@ body {
     justify-content: center;
     gap: 8px;
     text-decoration: none;
+    color: white;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .btn-secondary {
-    background: #e2e8f0;
-    color: #4a5568;
+    background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
 }
 
 .btn-success {
-    background: linear-gradient(135deg, #48bb78, #38a169);
-    color: white;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
 }
 
 .btn-info {
-    background: linear-gradient(135deg, #4299e1, #3182ce);
-    color: white;
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
 }
 
 .btn-warning {
-    background: linear-gradient(135deg, #ed8936, #dd6b20);
-    color: white;
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
 }
 
-/* 页脚 */
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px;
@@ -257,21 +244,19 @@ body {
     font-size: 0.9rem;
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .main-content {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
-    .header {
-        padding: 30px 20px;
+    .header h1 {
+        font-size: 2rem;
     }
     
-    .header-content h1 {
-        font-size: 2rem;
-        flex-direction: column;
-        gap: 10px;
+    .subtitle {
+        font-size: 1rem;
     }
     
     .checklist-container,
@@ -279,18 +264,12 @@ body {
         padding: 20px;
     }
     
-    .checklist-section {
-        padding: 20px;
+    .progress-section {
+        position: static;
     }
     
     .action-buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .btn {
-        flex: 1;
-        min-width: 120px;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -299,16 +278,16 @@ body {
         padding: 10px;
     }
     
-    .header-content h1 {
-        font-size: 1.5rem;
+    .header {
+        padding: 30px 15px;
     }
     
-    .subtitle {
-        font-size: 1rem;
+    .header h1 {
+        font-size: 1.8rem;
     }
     
     .checklist-item {
-        padding: 10px;
+        padding: 12px;
     }
     
     .checklist-item label {
@@ -316,34 +295,45 @@ body {
     }
 }
 
-/* 打印样式 */
+/* Print styles */
 @media print {
     body {
         background: white;
+        color: black;
     }
     
     .header,
-    .checklist-container,
-    .progress-section {
-        background: white;
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-    
-    .action-buttons {
-        display: none;
-    }
-    
+    .progress-section,
+    .action-buttons,
     .footer {
         display: none;
     }
+    
+    .checklist-container {
+        background: white;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+    
+    .checklist-item {
+        background: white;
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+    }
+    
+    .checklist-item:hover {
+        background: white;
+        transform: none;
+        box-shadow: none;
+    }
 }
 
-/* 动画效果 */
-@keyframes fadeInUp {
+/* Animation effects */
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -351,12 +341,16 @@ body {
     }
 }
 
-.checklist-section {
-    animation: fadeInUp 0.6s ease forwards;
+.checklist-container,
+.progress-section {
+    animation: fadeIn 0.6s ease-out;
 }
 
-.checklist-section:nth-child(1) { animation-delay: 0.1s; }
-.checklist-section:nth-child(2) { animation-delay: 0.2s; }
-.checklist-section:nth-child(3) { animation-delay: 0.3s; }
-.checklist-section:nth-child(4) { animation-delay: 0.4s; }
-.checklist-section:nth-child(5) { animation-delay: 0.5s; }
+.checklist-item {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.checklist-item:nth-child(1) { animation-delay: 0.1s; }
+.checklist-item:nth-child(2) { animation-delay: 0.2s; }
+.checklist-item:nth-child(3) { animation-delay: 0.3s; }
+.checklist-item:nth-child(4) { animation-delay: 0.4s; }
